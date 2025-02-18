@@ -1,3 +1,3 @@
-# ts-template
+# ts-bun-template
 
-Template repository for TypeScript projects
+Template repository for TypeScript projects using Bun

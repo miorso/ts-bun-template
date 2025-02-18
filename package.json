@@ -1,19 +1,20 @@
 {
-	"name": "@miorso/ts-template",
+	"name": "@miorso/ts-bun-template",
 	"version": "1.0.0",
-	"description": "Template repository for TypeScript projects",
+	"description": "Template repository for TypeScript projects using Bun",
 	"keywords": [
 		"typescript",
 		"ts",
-		"template"
+		"template",
+		"bun"
 	],
-	"homepage": "https://github.com/miorso/ts-template#readme",
+	"homepage": "https://github.com/miorso/ts-bun-template#readme",
 	"bugs": {
-		"url": "https://github.com/miorso/ts-template/issues"
+		"url": "https://github.com/miorso/ts-bun-template/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/miorso/ts-template.git"
+		"url": "git+https://github.com/miorso/ts-bun-template.git"
 	},
 	"license": "MIT",
 	"author": "Mikel Orbea",
@@ -25,7 +26,7 @@
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"build": "tsup src/index.ts --format esm --dts",
+		"build": "bun run bun.config.js",
 		"clean": "rm -rf dist",
 		"lint": "eslint --max-warnings=0",
 		"lint:fix": "eslint --fix .",
@@ -33,8 +34,7 @@
 		"prettier": "prettier --check .",
 		"prettier:fix": "prettier --write .",
 		"publish": "clean-publish",
-		"sort": "npx sort-package-json",
-		"update": "npx npm-check-updates -u && npm install"
+		"sort": "bunx sort-package-json"
 	},
 	"lint-staged": {
 		"**/*": [
@@ -44,7 +44,8 @@
 	"devDependencies": {
 		"@miorso/eslint-config": "^1.0.5",
 		"@miorso/prettier-config": "^1.0.3",
-		"@miorso/tsconfig": "^1.0.7",
+		"@miorso/tsconfig": "^1.0.8",
+		"@types/bun": "^1.2.2",
 		"clean-publish": "^5.1.0",
 		"eslint": "^9.20.1",
 		"husky": "^9.1.7",
